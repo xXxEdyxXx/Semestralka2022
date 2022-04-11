@@ -17,6 +17,8 @@ public class HerniPlan {
     private Prostor aktualniProstor;
     private String vRuce = null;
     private boolean duch = false;
+    public EvidenceVeci evidenceVeci;
+
      /**
      *  Konstruktor který vytváří jednotlivé prostory a propojuje je pomocí východů.
      *  Jako výchozí aktuální prostor nastaví halu.
@@ -33,7 +35,7 @@ public class HerniPlan {
         // vytvářejí se jednotlivé prostory
 
         Prostor hala = new Prostor("Hala", "Dlouhá tmavá hala se čtyřmi dveřmi a s velkým honosným schodištěm na konci. Ze zhora se ozývají podivné zvuky. Z jedné z místností se ozývají krásné toný piana");
-        Prostor obyvaciPokoj = new Prostor("Obývací_pokoj", "Velká místnost, zatažené závěsy, stará pohovka s polštářky.Uprostřed místnosti stojí krásný naleštěný piano, které samo hraje. V rohu je plyšoví medvídek. ");
+        Prostor obyvaciPokoj = new Prostor("Obývací_pokoj", "Velká místnost, zatažené závěsy, stará pohovka s polštářky.Uprostřed místnosti stojí krásný naleštěný piano, které samo hraje. V rohu je plyšoví medvídek.");
         Prostor kuchyn = new Prostor("Kuchyň", "Menší místnost, všude lítají mouchy, je tu velmi zatuhlý zvuk, na desce leží nůž");
         Prostor garaz = new Prostor("Garáž", "prázdná místnost, žádné okna ani dveře, podlaha divně klouže, musím být opatrný");
         Prostor koupelna = new Prostor("Koupelna", "Malá mramorová místnost, krásně naleštěná a vypucovaná koupelna, vypadá mnohem líp než u mě doma");
@@ -41,7 +43,7 @@ public class HerniPlan {
         Prostor tajemnaMistnost = new Prostor("Tajemná_místnost", "Temná místnost, sotva vidím před sebe, hlasy ztichly, něco se hýbe na konci místnosti, vypadá to jako Vl...............");
         Prostor loznice = new Prostor("Ložnice", "Místnost s velkými okny, měsíční svit krásně rozzařuje celou mistnost");
         Prostor detskyPokoj = new Prostor("Dětský_pokoj", "Mála místnost s postelí, na posteli jsou vyskládaný plyšoví medvídci u prostřed mezi nimi je mezera, jakoby tam nějaký medvídek chyběl");
-
+        Prostor ruka = new Prostor("RUKA", "");
         
         // přiřazují se průchody mezi prostory (sousedící prostory)
 
@@ -65,6 +67,18 @@ public class HerniPlan {
         detskyPokoj.setVychod(schodiste);
 
         aktualniProstor = hala;  // hra začíná v hale
+
+        //Spawnovani věcí
+        evidenceVeci = new EvidenceVeci();
+        Vec nuz = new Vec("NŮŽ", kuchyn);
+        Vec medvidek = new Vec("MEDVÍDEK", obyvaciPokoj);
+        Vec klic = new Vec("KLÍČ", detskyPokoj);
+
+        evidenceVeci.vlozVec(nuz);
+        evidenceVeci.vlozVec(medvidek);
+        evidenceVeci.vlozVec(klic);
+
+
     }
     
     /**
@@ -101,4 +115,11 @@ public class HerniPlan {
     public void setDuch(boolean duch) {
         this.duch = duch;
     }
+
+    public EvidenceVeci getEvidenceVeci() {
+        return evidenceVeci;
+    }
+
+
+
 }

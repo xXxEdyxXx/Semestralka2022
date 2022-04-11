@@ -9,14 +9,21 @@ class PrikazPust implements IPrikaz {
         this.plan = plan;
     }
 
+    //Metoda která pustí předmět z ruky a vrátí dialog
+
     @Override
     public String provedPrikaz(String... parametry) {
-        if(plan.getvRuce() == null){
+
+        Vec pustenaVec = plan.evidenceVeci.predmetVRuce();
+
+        if(pustenaVec == null){
+
             return "Nemám co pustit";
+
         }else {
-            String holder = plan.getvRuce();
-            plan.setvRuce(null);
-            return "Pustil jsem " + holder;
+            String dialog = "Pustil jsem " + plan.evidenceVeci.predmetVRuce().getNazev();
+            plan.evidenceVeci.predmetVRuce().setProstor(plan.getAktualniProstor());
+            return dialog;
         }
 
     }

@@ -48,17 +48,19 @@ class PrikazJdi implements IPrikaz {
             return "Tam se odsud jít nedá!";
         }
         else {
+            String dialog = sousedniProstor.dlouhyPopis();
             plan.setAktualniProstor(sousedniProstor);
             if ( getRandomNumber(0,100) > 50){
                 plan.setDuch(true);
-                return sousedniProstor.dlouhyPopis() + "\nV rohu mistnosti stojí duch\n";
+                dialog += "\nV rohu mistnosti stojí duch";
             }
-
-            return sousedniProstor.dlouhyPopis();
+            return dialog;
         }
 
+
+
     }
-    
+
     /**
      *  Metoda vrací název příkazu (slovo které používá hráč pro jeho vyvolání)
      *  

@@ -24,18 +24,19 @@ class PrikazInterakce implements IPrikaz {
 
         String dialog = null;
 
-        if(plan.getAktualniProstor().getNazev().equals("Kuchyň") && vec.equals("Nůž")){
-            dialog = kontrolaRuka(vec);
-        }else if(plan.getAktualniProstor().getNazev().equals("Obývací_pokoj") && vec.equals("Medvídek")){
-            dialog = kontrolaRuka(vec);
-        }else if(plan.getAktualniProstor().getNazev().equals("Dětský_pokoj") && vec.equals("Klíč")){
-            dialog = kontrolaRuka(vec);
-        }else{
-            return "S tím nevím co mám dělat";
+        //Pokud se jedná o předmět který se dá sebrat
+
+        Vec predmet = plan.evidenceVeci.jePredmetVMistnosti(plan.getAktualniProstor(), vec);
+        if(predmet != null){
+            predmet.setProstor(null);
+            return "Držim " + vec;
         }
 
-        return dialog;
 
+
+
+
+        return "ŠPATNĚ";
     }
 
     @Override

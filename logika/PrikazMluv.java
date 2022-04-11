@@ -58,7 +58,7 @@ class PrikazMluv implements IPrikaz{
 
         }
 
-        return "insert a funny joke test test";
+        return "insert a funny joke";
     }
 
     @Override
