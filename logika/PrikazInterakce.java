@@ -27,12 +27,18 @@ class PrikazInterakce implements IPrikaz {
         //Pokud se jedná o předmět který se dá sebrat
 
         Vec predmet = plan.evidenceVeci.jePredmetVMistnosti(plan.getAktualniProstor(), vec);
-        if(predmet != null){
-            predmet.setProstor(null);
-            return "Držim " + vec;
+        if(predmet != null && predmet.isMohuVzit() == true){
+            if(plan.evidenceVeci.predmetVRuce() == null){
+                predmet.setProstor(null);
+                return "Držim " + vec;
+            }else {
+                return "Neunesu už další věc";
+            }
         }
 
-
+        if(predmet != null && predmet.isMohuVzit() == false){
+            return predmet.getPopis();
+        }
 
 
 

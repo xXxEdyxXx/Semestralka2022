@@ -35,8 +35,8 @@ public class HerniPlan {
         // vytvářejí se jednotlivé prostory
 
         Prostor hala = new Prostor("Hala", "Dlouhá tmavá hala se čtyřmi dveřmi a s velkým honosným schodištěm na konci. Ze zhora se ozývají podivné zvuky. Z jedné z místností se ozývají krásné toný piana");
-        Prostor obyvaciPokoj = new Prostor("Obývací_pokoj", "Velká místnost, zatažené závěsy, stará pohovka s polštářky.Uprostřed místnosti stojí krásný naleštěný piano, které samo hraje. V rohu je plyšoví medvídek.");
-        Prostor kuchyn = new Prostor("Kuchyň", "Menší místnost, všude lítají mouchy, je tu velmi zatuhlý zvuk, na desce leží nůž");
+        Prostor obyvaciPokoj = new Prostor("Obývací_pokoj", "Velká místnost, zatažené závěsy, stará pohovka s polštářky.Uprostřed místnosti stojí krásný naleštěný piano, které samo hraje.");
+        Prostor kuchyn = new Prostor("Kuchyň", "Menší místnost, všude lítají mouchy, je tu velmi zatuhlý zvuk");
         Prostor garaz = new Prostor("Garáž", "prázdná místnost, žádné okna ani dveře, podlaha divně klouže, musím být opatrný");
         Prostor koupelna = new Prostor("Koupelna", "Malá mramorová místnost, krásně naleštěná a vypucovaná koupelna, vypadá mnohem líp než u mě doma");
         Prostor schodiste = new Prostor("Schodiště", "Podivné zvuky jsou hlasitejší, dokážu říct že se ozývaji ze tajemné místnosti na konci chodby, nemyslím si, že je dobrý nápad zkoumat co je za nimi, na levo se nachází další dvoje dveře");
@@ -70,13 +70,15 @@ public class HerniPlan {
 
         //Spawnovani věcí
         evidenceVeci = new EvidenceVeci();
-        Vec nuz = new Vec("NŮŽ", kuchyn);
-        Vec medvidek = new Vec("MEDVÍDEK", obyvaciPokoj);
-        Vec klic = new Vec("KLÍČ", detskyPokoj);
+        Vec nuz = new Vec("NŮŽ", kuchyn, true, "Velmi ostrý nůž");
+        Vec medvidek = new Vec("MEDVÍDEK", obyvaciPokoj,true, "Chlupatý plyšový medvídek");
+        Vec klic = new Vec("KLÍČ", detskyPokoj, true, "Zlatý klíč");
+        Vec piano = new Vec("PIANO", obyvaciPokoj, false, "Jdou slyšet krásné noty, čím víc se přibližuji tím méně hraje. Když se k němu postavím... ztichlo");
 
         evidenceVeci.vlozVec(nuz);
         evidenceVeci.vlozVec(medvidek);
         evidenceVeci.vlozVec(klic);
+        evidenceVeci.vlozVec(piano);
 
 
     }

@@ -12,10 +12,11 @@ class PrikazInventar implements IPrikaz{
     @Override
     public String provedPrikaz(String... parametry) {
 
-            if(plan.getvRuce() == null){
-                return "V ruce nic nedržím";
-            }
-            return plan.getvRuce();
+        Vec predmet = plan.evidenceVeci.predmetVRuce();
+        if(predmet == null){
+            return "V ruce nic nedržím";
+        }
+            return "V ruce držím " + predmet.getNazev() + "\n" + predmet.getPopis();
 
     }
 
