@@ -10,11 +10,23 @@ public class EvidenceVeci {
     public EvidenceVeci(){seznam = new HashSet<>();
     }
 
+    /**
+     *     Metoda vkládající danou věc do evidence
+     *     @param vec
+     *     @return true pokud byla přidána
+     */
+
+
     public boolean vlozVec(Vec vec){
         seznam.add(vec);
         return true;
     }
 
+    /**
+     * Metoda vracící seznam veci v prostoru
+     * @param prostor
+     * @return vyber
+     */
 
     public Collection<String> vratSeznamVeciVMistnosti(Prostor prostor) {
         Collection<String> vyber = new ArrayList<>();
@@ -27,6 +39,13 @@ public class EvidenceVeci {
         return vyber;
     }
 
+    /**
+     * Metoda vracící predmet v místnosti pokud tam je
+     * @param prostor
+     * @param predmet
+     * @return vec pokud se predmet nachazí, null pokud se nenachází
+     */
+
     public Vec jePredmetVMistnosti(Prostor prostor, String predmet){
         for (Vec vec:seznam){
             if(vec.getProstor() == prostor && vec.getNazev().equals(predmet)){
@@ -36,6 +55,11 @@ public class EvidenceVeci {
         return null;
     }
 
+    /**
+     * Metoda vracící predmet v rucce
+     * @return vec v ruce, Null - žadný předmet v ruce není
+     */
+
     public Vec predmetVRuce(){
         for (Vec vec:seznam){
             if(vec.getProstor() == null){
@@ -44,6 +68,12 @@ public class EvidenceVeci {
         }
         return null;
     }
+
+    /**
+     * Metoda vracící daný předmět podle jeho názvu
+     * @param nazev
+     * @return vec s daným názvem, null pokud předmet neexistuje
+     */
 
     public Vec getUrcityPredmet(String nazev){
         for (Vec vec:seznam){

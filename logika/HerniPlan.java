@@ -25,7 +25,6 @@ public class HerniPlan {
      */
     public HerniPlan() {
         zalozProstoryHry();
-
     }
     /**
      *  Vytváří jednotlivé prostory a propojuje je pomocí východů.
@@ -77,6 +76,7 @@ public class HerniPlan {
         Vec dvere = new Vec("DVEŘE", hala, false, "Zamčené dveře");
         Vec okno = new Vec("OKNO", kuchyn, false, "Velké okno... Sotva z něho jde vidět ven jak je zamrzlé");
 
+        //Vkladání věci do evidence
         evidenceVeci.vlozVec(nuz);
         evidenceVeci.vlozVec(medvidek);
         evidenceVeci.vlozVec(klic);
@@ -106,17 +106,25 @@ public class HerniPlan {
         aktualniProstor = prostor;
     }
 
+    //Metoda vraci zda je v mistnosti duch
+
     public boolean getDuch() {
         return duch;
     }
+
+    //Metoda nastavuje zda je v mistnosti duch
 
     public void setDuch(boolean duch) {
         this.duch = duch;
     }
 
+    //Evidence predmetu
+
     public EvidenceVeci getEvidenceVeci() {
         return evidenceVeci;
     }
+
+    //Metody urcujici konec hry
 
     public void vyhrano(){
         status = true;
