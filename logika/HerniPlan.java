@@ -75,12 +75,14 @@ public class HerniPlan {
         Vec klic = new Vec("KLÍČ", spawner, true, "Zlatý klíč");
         Vec piano = new Vec("PIANO", obyvaciPokoj, false, "Jdou slyšet krásné noty, čím víc se přibližuji tím méně hraje. Když se k němu postavím... ztichlo");
         Vec dvere = new Vec("DVEŘE", hala, false, "Zamčené dveře");
+        Vec okno = new Vec("OKNO", kuchyn, false, "Velké okno... Sotva z něho jde vidět ven jak je zamrzlé");
 
         evidenceVeci.vlozVec(nuz);
         evidenceVeci.vlozVec(medvidek);
         evidenceVeci.vlozVec(klic);
         evidenceVeci.vlozVec(piano);
         evidenceVeci.vlozVec(dvere);
+        evidenceVeci.vlozVec(okno);
 
 
     }
