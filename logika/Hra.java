@@ -92,6 +92,9 @@ public class Hra implements IHra {
         if (platnePrikazy.jePlatnyPrikaz(slovoPrikazu)) {
             IPrikaz prikaz = platnePrikazy.vratPrikaz(slovoPrikazu);
             textKVypsani = prikaz.provedPrikaz(parametry);
+            if(herniPlan.isStatus()){
+                konecHry = true;
+            }
         }
         else {
             textKVypsani="Nevím co tím myslíš? Tento příkaz neznám. ";
@@ -125,6 +128,7 @@ public class Hra implements IHra {
      public HerniPlan getHerniPlan(){
         return herniPlan;
      }
-    
+
+
 }
 

@@ -36,13 +36,18 @@ class PrikazInterakce implements IPrikaz {
             }
         }
 
+        if( predmet != null && predmet.getNazev().equals("DVEŘE") && plan.evidenceVeci.predmetVRuce() != null && plan.evidenceVeci.predmetVRuce().getNazev().equals("KLÍČ")){
+            plan.vyhrano();
+            return "Utekl jsem";
+        }
+
         if(predmet != null && predmet.isMohuVzit() == false){
             return predmet.getPopis();
         }
 
 
 
-        return "ŠPATNĚ";
+        return "Tento předmět zde nevidím";
     }
 
     @Override
@@ -50,12 +55,5 @@ class PrikazInterakce implements IPrikaz {
         return NAZEV;
     }
 
-    private String kontrolaRuka(String vec){
-        if (plan.getvRuce() != null){
-            return "Neunesu už další věc";
-        }
-        plan.setvRuce(vec);
-        return "Držím " + vec;
-    }
 
 }

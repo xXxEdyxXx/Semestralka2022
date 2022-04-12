@@ -15,9 +15,9 @@ package logika;
 public class HerniPlan {
     
     private Prostor aktualniProstor;
-    private String vRuce = null;
     private boolean duch = false;
     public EvidenceVeci evidenceVeci;
+    public boolean status = false;
 
      /**
      *  Konstruktor který vytváří jednotlivé prostory a propojuje je pomocí východů.
@@ -74,11 +74,13 @@ public class HerniPlan {
         Vec medvidek = new Vec("MEDVÍDEK", obyvaciPokoj,true, "Chlupatý plyšový medvídek");
         Vec klic = new Vec("KLÍČ", detskyPokoj, true, "Zlatý klíč");
         Vec piano = new Vec("PIANO", obyvaciPokoj, false, "Jdou slyšet krásné noty, čím víc se přibližuji tím méně hraje. Když se k němu postavím... ztichlo");
+        Vec dvere = new Vec("DVEŘE", hala, false, "Zamčené dveře");
 
         evidenceVeci.vlozVec(nuz);
         evidenceVeci.vlozVec(medvidek);
         evidenceVeci.vlozVec(klic);
         evidenceVeci.vlozVec(piano);
+        evidenceVeci.vlozVec(dvere);
 
 
     }
@@ -102,14 +104,6 @@ public class HerniPlan {
         aktualniProstor = prostor;
     }
 
-    public void setvRuce(String vec){
-        vRuce = vec;
-    }
-
-    public String getvRuce(){
-        return vRuce;
-    }
-
     public boolean getDuch() {
         return duch;
     }
@@ -122,6 +116,11 @@ public class HerniPlan {
         return evidenceVeci;
     }
 
+    public void vyhrano(){
+        status = true;
+    }
 
-
+    public boolean isStatus() {
+        return status;
+    }
 }
