@@ -5,6 +5,11 @@ class PrikazInventar implements IPrikaz{
     private static final String NAZEV = "inventar";
     private HerniPlan plan;
 
+    /**
+     * Prikaz který vypíše předmet v ruce
+     * @param plan
+     */
+
     public PrikazInventar(HerniPlan plan) {
         this.plan = plan;
     }

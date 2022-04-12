@@ -9,6 +9,12 @@ class PrikazRozhlednout implements IPrikaz{
         this.plan = plan;
     }
 
+    /**
+     * Příkaz při kterém se hráč rozhlédne po místnosti a vypíše předměty se kterémi se dá interktovat
+     * @param parametry počet parametrů závisí na konkrétním příkazu.
+     * @return
+     */
+
     @Override
     public String provedPrikaz(String... parametry) {
 

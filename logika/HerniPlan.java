@@ -106,25 +106,36 @@ public class HerniPlan {
         aktualniProstor = prostor;
     }
 
-    //Metoda vraci zda je v mistnosti duch
+    /**
+     * Metoda vracící zde je v mistonosti duch
+     * @return duch
+     */
 
     public boolean getDuch() {
         return duch;
     }
 
-    //Metoda nastavuje zda je v mistnosti duch
+    /**
+     * Metoda nastavující ducha v mistnosti
+     * @param duch
+     */
 
     public void setDuch(boolean duch) {
         this.duch = duch;
     }
 
-    //Evidence predmetu
+    /**
+     * Metoda vracíci evidenciVeci
+     * @return evidenceVeci
+     */
 
     public EvidenceVeci getEvidenceVeci() {
         return evidenceVeci;
     }
 
-    //Metody urcujici konec hry
+    /**
+     * Metody přirazující zda hráč vyhrál
+     */
 
     public void vyhrano(){
         status = true;

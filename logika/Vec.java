@@ -2,6 +2,12 @@ package logika;
 
 public class Vec {
 
+    /**
+     * Class Vec s vlastnosti: Nazev ( jak se jmenuje ), prostor ( ve kterém se právě nachází )
+     * popis (Krátky popis předmetu), mohuVzit(pokud si ho hrač může dát do ruky)
+     *
+     */
+
     private String nazev;
     private Prostor prostor;
     private String popis;

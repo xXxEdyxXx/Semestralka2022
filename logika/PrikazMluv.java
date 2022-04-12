@@ -5,6 +5,11 @@ class PrikazMluv implements IPrikaz{
     private static final String NAZEV = "mluv";
     private HerniPlan plan;
 
+    /**
+     * Příkaz prři kterém si promluvíme s nějakou postavou pokud se nachází v místnosti
+     * @param plan
+     */
+
     public PrikazMluv(HerniPlan plan) {
         this.plan = plan;
     }

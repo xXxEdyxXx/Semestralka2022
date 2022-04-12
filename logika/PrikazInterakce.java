@@ -9,6 +9,12 @@ class PrikazInterakce implements IPrikaz {
         this.plan = plan;
     }
 
+    /**
+     * Příkaz který interaktuje s předmety v místnosti. Pokud se jedná o predmet se kterým nelze hýbat tak se vypíše popis predmetu
+     * Pokud se s predmetem da pohnout pokuisíme se ho sebrat a dat do ruky
+     * @param parametry počet parametrů závisí na konkrétním příkazu.
+     * @return
+     */
 
     @Override
     public String provedPrikaz(String... parametry) {

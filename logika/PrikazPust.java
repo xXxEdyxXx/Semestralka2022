@@ -9,7 +9,11 @@ class PrikazPust implements IPrikaz {
         this.plan = plan;
     }
 
-    //Metoda která pustí předmět z ruky a vrátí dialog
+    /**
+     * Příkaz který položí předmět v ruce a položí ho do místnosti ve kterém se nachází hráč
+     * @param parametry počet parametrů závisí na konkrétním příkazu.
+     * @return
+     */
 
     @Override
     public String provedPrikaz(String... parametry) {
