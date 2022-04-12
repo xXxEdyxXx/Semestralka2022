@@ -22,7 +22,16 @@ class PrikazPust implements IPrikaz {
 
         }else {
             String dialog = "Pustil jsem " + plan.evidenceVeci.predmetVRuce().getNazev();
+            if(plan.getAktualniProstor().getNazev().equals("Dětský_pokoj") && plan.evidenceVeci.predmetVRuce().getNazev().equals("MEDVÍDEK")){
+                dialog += ", Když jsem ho položil viděl jsem záblesk něčeho zlatého";
+                plan.evidenceVeci.getUrcityPredmet("KLÍČ").setProstor(plan.getAktualniProstor());
+            }
+
+
             plan.evidenceVeci.predmetVRuce().setProstor(plan.getAktualniProstor());
+
+
+
             return dialog;
         }
 

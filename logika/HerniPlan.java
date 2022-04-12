@@ -43,7 +43,7 @@ public class HerniPlan {
         Prostor tajemnaMistnost = new Prostor("Tajemná_místnost", "Temná místnost, sotva vidím před sebe, hlasy ztichly, něco se hýbe na konci místnosti, vypadá to jako Vl...............");
         Prostor loznice = new Prostor("Ložnice", "Místnost s velkými okny, měsíční svit krásně rozzařuje celou mistnost");
         Prostor detskyPokoj = new Prostor("Dětský_pokoj", "Mála místnost s postelí, na posteli jsou vyskládaný plyšoví medvídci u prostřed mezi nimi je mezera, jakoby tam nějaký medvídek chyběl");
-        Prostor ruka = new Prostor("RUKA", "");
+        Prostor spawner = new Prostor("Spawner", "Admin-only");
         
         // přiřazují se průchody mezi prostory (sousedící prostory)
 
@@ -72,7 +72,7 @@ public class HerniPlan {
         evidenceVeci = new EvidenceVeci();
         Vec nuz = new Vec("NŮŽ", kuchyn, true, "Velmi ostrý nůž");
         Vec medvidek = new Vec("MEDVÍDEK", obyvaciPokoj,true, "Chlupatý plyšový medvídek");
-        Vec klic = new Vec("KLÍČ", detskyPokoj, true, "Zlatý klíč");
+        Vec klic = new Vec("KLÍČ", spawner, true, "Zlatý klíč");
         Vec piano = new Vec("PIANO", obyvaciPokoj, false, "Jdou slyšet krásné noty, čím víc se přibližuji tím méně hraje. Když se k němu postavím... ztichlo");
         Vec dvere = new Vec("DVEŘE", hala, false, "Zamčené dveře");
 

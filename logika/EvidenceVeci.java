@@ -45,6 +45,14 @@ public class EvidenceVeci {
         return null;
     }
 
+    public Vec getUrcityPredmet(String nazev){
+        for (Vec vec:seznam){
+            if(vec.getNazev().equals(nazev)){
+                return vec;
+            }
+        }
+        return null;
+    }
 
 
 }
