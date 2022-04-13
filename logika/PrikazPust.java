@@ -26,6 +26,9 @@ class PrikazPust implements IPrikaz {
 
         }else {
             String dialog = "Pustil jsem " + plan.evidenceVeci.predmetVRuce().getNazev();
+
+
+            //Podmínky pokud necháme nějaký předmet v nějaké místnosti
             if(plan.getAktualniProstor().getNazev().equals("Dětský_pokoj") && plan.evidenceVeci.predmetVRuce().getNazev().equals("MEDVÍDEK")){
                 dialog += ", Když jsem ho položil viděl jsem záblesk něčeho zlatého";
                 plan.evidenceVeci.getUrcityPredmet("KLÍČ").setProstor(plan.getAktualniProstor());
@@ -33,9 +36,6 @@ class PrikazPust implements IPrikaz {
 
 
             plan.evidenceVeci.predmetVRuce().setProstor(plan.getAktualniProstor());
-
-
-
             return dialog;
         }
 

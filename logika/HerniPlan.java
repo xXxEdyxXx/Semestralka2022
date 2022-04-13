@@ -134,7 +134,7 @@ public class HerniPlan {
     }
 
     /**
-     * Metody přirazující zda hráč vyhrál
+     * Metody přirazující zda hráč dohr8l
      */
 
     public void vyhrano(){

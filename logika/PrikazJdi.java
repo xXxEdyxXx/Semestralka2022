@@ -54,6 +54,10 @@ class PrikazJdi implements IPrikaz {
                 plan.setDuch(true);
                 dialog += "\nV rohu mistnosti stojí duch";
             }
+            if(sousedniProstor.getNazev().equals("Tajemná_místnost")){
+                dialog += "\nSnědl tě vlk";
+                plan.vyhrano();
+            }
             return dialog;
         }
 

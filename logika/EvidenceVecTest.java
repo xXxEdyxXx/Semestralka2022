@@ -26,7 +26,7 @@ public class EvidenceVecTest {
     public void testManipulace(){
         assertEquals(true, evidenceVeci.vlozVec(vec1));
         assertEquals(true, evidenceVeci.vlozVec(vec2));
-        assertEquals("[" + vec2.getNazev() + ", " + vec1.getNazev() + "]", evidenceVeci.vratSeznamVeciVMistnosti(prostor).toString());
+        assertEquals("[" + vec1.getNazev() + ", " + vec2.getNazev() + "]", evidenceVeci.vratSeznamVeciVMistnosti(prostor).toString());
         assertEquals(null, evidenceVeci.predmetVRuce());
         assertEquals(vec1, evidenceVeci.getUrcityPredmet("MEC"));
         evidenceVeci.getUrcityPredmet("MEC").setProstor(null);
