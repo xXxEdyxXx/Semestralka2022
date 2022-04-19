@@ -137,7 +137,7 @@ public class HerniPlan {
      * Metody přirazující zda hráč dohr8l
      */
 
-    public void vyhrano(){
+    public void dohrano(){
         status = true;
     }
 
