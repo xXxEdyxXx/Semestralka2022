@@ -9,7 +9,7 @@ package logika;
  *  propojuje je vzájemně pomocí východů 
  *  a pamatuje si aktuální prostor, ve kterém se hráč právě nachází.
  *
- *@author     Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova
+ *@author     Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova, Adam Stupka
  *@version    pro školní rok 2016/2017
  */
 public class HerniPlan {

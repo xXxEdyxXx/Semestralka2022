@@ -8,7 +8,7 @@ package logika;
  *  Vypisuje uvítací a ukončovací text hry.
  *  Také vyhodnocuje jednotlivé příkazy zadané uživatelem.
  *
- *@author     Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova
+ *@author     Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova, Adam Stupka
  *@version    pro školní rok 2016/2017
  */
 

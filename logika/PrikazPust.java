@@ -1,5 +1,11 @@
 package logika;
 
+/**
+ *  Třída PrikazPust - Třída pokládající předmět do místnosti ve kterém se hrdina nachází
+ *
+ *@author     Adam Stupka
+ */
+
 class PrikazPust implements IPrikaz {
 
     private static final String NAZEV = "pust";

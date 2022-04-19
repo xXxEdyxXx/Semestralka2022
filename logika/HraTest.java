@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
  * Testovací třída HraTest slouží ke komplexnímu otestování
  * třídy Hra
  *
- * @author    Jarmila Pavlíčková
+ * @author    Jarmila Pavlíčková, Adam Stupka
  * @version  pro školní rok 2016/2017
  */
 public class HraTest {

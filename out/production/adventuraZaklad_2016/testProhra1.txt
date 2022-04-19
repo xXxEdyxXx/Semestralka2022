@@ -1,0 +1,4 @@
+jdi Kuchyň
+interakce NŮŽ
+jdi Hala
+jdi Garáž

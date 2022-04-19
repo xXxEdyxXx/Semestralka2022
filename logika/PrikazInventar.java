@@ -1,5 +1,11 @@
 package logika;
 
+/**
+ *  Třída PrikazInventar - Příkaz vypisující co ma hrdina v ruce (Batohu)
+ *
+ *@author     Adam Stupka
+ */
+
 class PrikazInventar implements IPrikaz{
 
     private static final String NAZEV = "inventar";

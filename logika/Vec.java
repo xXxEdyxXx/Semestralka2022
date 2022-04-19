@@ -1,5 +1,11 @@
 package logika;
 
+/**
+ *  Třída Vec
+ *
+ *@author     Adam Stupka
+ */
+
 public class Vec {
 
     /**

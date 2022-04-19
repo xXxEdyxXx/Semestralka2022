@@ -1,5 +1,11 @@
 package logika;
 
+/**
+ *  Třída PrikazMluv - Slouží hlavně k pobavení duchem který vypráví vtipy
+ *
+ *@author     Adam Stupka
+ */
+
 class PrikazMluv implements IPrikaz{
 
     private static final String NAZEV = "mluv";

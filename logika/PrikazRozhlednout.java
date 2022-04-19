@@ -1,5 +1,11 @@
 package logika;
 
+/**
+ *  Třída PrikazRozhlednout - Příkaz vypisující co hrdina v místnosti vidí
+ *
+ *@author     Adam Stupka
+ */
+
 class PrikazRozhlednout implements IPrikaz{
 
     private static final String NAZEV = "rozhlednout";

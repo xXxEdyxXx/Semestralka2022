@@ -1,5 +1,14 @@
 package logika;
 
+/**
+ *  Třída PrikazInterakce - třída představující logiku adventury.
+ *
+ *  Toto je hlavní třída  manipulace s předměty. Vypisuje nazvy, popisy a interakce s předměty
+ *
+ *@author     Adam Stupka
+ *@version
+ */
+
 class PrikazInterakce implements IPrikaz {
 
     private static final String NAZEV = "interakce";
