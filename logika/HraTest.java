@@ -52,14 +52,68 @@ public class HraTest {
      */
     @Test
     public void testPrubehHry() {
-        assertEquals("domeček", hra1.getHerniPlan().getAktualniProstor().getNazev());
-        hra1.zpracujPrikaz("jdi les");
+        assertEquals("Hala", hra1.getHerniPlan().getAktualniProstor().getNazev());
+
+        hra1.zpracujPrikaz("jdi Obývací_pokoj");
         assertEquals(false, hra1.konecHry());
-        assertEquals("les", hra1.getHerniPlan().getAktualniProstor().getNazev());
-        hra1.zpracujPrikaz("jdi hluboký_les");
+        assertEquals("Obývací_pokoj", hra1.getHerniPlan().getAktualniProstor().getNazev());
+
+        hra1.zpracujPrikaz("interakce MEDVÍDEK");
         assertEquals(false, hra1.konecHry());
-        assertEquals("hluboký_les", hra1.getHerniPlan().getAktualniProstor().getNazev());
-        hra1.zpracujPrikaz("konec");
+
+        hra1.zpracujPrikaz("jdi Hala");
+        assertEquals(false, hra1.konecHry());
+
+        hra1.zpracujPrikaz("jdi Schodiště");
+        assertEquals(false, hra1.konecHry());
+
+        hra1.zpracujPrikaz("jdi Dětský_pokoj");
+        assertEquals(false, hra1.konecHry());
+
+        hra1.zpracujPrikaz("pust");
+        assertEquals(false, hra1.konecHry());
+
+        hra1.zpracujPrikaz("interakce KLÍČ");
+        assertEquals(false, hra1.konecHry());
+
+        hra1.zpracujPrikaz("jdi Schodiště");
+        assertEquals(false, hra1.konecHry());
+
+        hra1.zpracujPrikaz("jdi Hala");
+        assertEquals(false, hra1.konecHry());
+
+        hra1.zpracujPrikaz("interakce DVEŘE");
+        assertEquals(true, hra1.konecHry());
+
+    }
+
+    @Test
+    public void testPrubehHry2() {
+        assertEquals("Hala", hra1.getHerniPlan().getAktualniProstor().getNazev());
+
+        hra1.zpracujPrikaz("jdi Kuchyň");
+        assertEquals(false, hra1.konecHry());
+
+        hra1.zpracujPrikaz("interakce NŮŽ");
+        assertEquals(false, hra1.konecHry());
+
+        hra1.zpracujPrikaz("jdi Hala");
+        assertEquals(false, hra1.konecHry());
+
+        hra1.zpracujPrikaz("jdi Garáž");
         assertEquals(true, hra1.konecHry());
     }
+
+    @Test
+    public void testPrubehHry3() {
+        assertEquals("Hala", hra1.getHerniPlan().getAktualniProstor().getNazev());
+
+        hra1.zpracujPrikaz("jdi Schodiště");
+        assertEquals(false, hra1.konecHry());
+
+        hra1.zpracujPrikaz("jdi Tajemná_místnost");
+        assertEquals(true, hra1.konecHry());
+
+    }
+
 }

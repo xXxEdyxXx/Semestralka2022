@@ -16,3 +16,4 @@ NÁPOVĚDA KE HŘE: (Spoiler)
 
 Jak vyhrát:  Hráč musí najít medvídka a položit ho do dětského pokoje... Pokud tak uděla objeví se mu klíč od hlavních dveří a může utéct
 Jak prohrát: Hráč za žádných okolností nesmí vstoupit do tajemné místnosti.
+             Hráč nesmí mít v ruce nůž a jít do garáže.

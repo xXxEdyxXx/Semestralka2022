@@ -7,6 +7,8 @@ package main;
 import logika.*;
 import uiText.TextoveRozhrani;
 
+import java.io.File;
+
 /*******************************************************************************
  * Třída  Start je hlavní třídou projektu,
  * který představuje jednoduchou textovou adventuru určenou k dalším úpravám a rozšiřování
@@ -23,9 +25,13 @@ public class Start
      */
     public static void main(String[] args)
     {
-        
         IHra hra = new Hra();
         TextoveRozhrani ui = new TextoveRozhrani(hra);
-        ui.hraj();
+        if(args.length == 0){
+            ui.hraj();
+        }else {
+            File soubor = new File(args[0]);
+            ui.hraj(soubor);
+        }
     }
 }

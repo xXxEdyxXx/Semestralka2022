@@ -1,0 +1,10 @@
+jdi Obývací_pokoj
+interakce MEDVÍDEK
+jdi Hala
+jdi Schodiště
+jdi Dětský_pokoj
+pust
+interakce KLÍČ
+jdi Schodiště
+jdi Hala
+interakce DVEŘE

@@ -1,6 +1,7 @@
 package uiText;
 
 
+import java.io.*;
 import java.util.Scanner;
 import logika.IHra;
 /**
@@ -41,6 +42,34 @@ public class TextoveRozhrani {
             String radek = prectiString();
             System.out.println(hra.zpracujPrikaz(radek));
         }
+
+        System.out.println(hra.vratEpilog());
+    }
+
+    /**
+     * Čtení ze souboru
+     */
+
+    public void hraj(File soubor) {
+        System.out.println(hra.vratUvitani());
+
+        // základní cyklus programu - opakovaně se čtou příkazy a poté
+        // se provádějí do konce hry.
+
+        try(BufferedReader ctecka = new BufferedReader(new FileReader(soubor));) {
+            String radek = ctecka.readLine();
+            while (!hra.konecHry() && radek != null) {
+                System.out.println("***"+radek+"***");
+                System.out.println(hra.zpracujPrikaz(radek));
+                radek = ctecka.readLine();
+            }
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Soubor nenalezen");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
         System.out.println(hra.vratEpilog());
     }

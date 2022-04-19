@@ -40,6 +40,8 @@ class PrikazInterakce implements IPrikaz {
             }
         }
 
+        //interakce se dveřmi pokud máme klíč
+
         if( predmet != null && predmet.getNazev().equals("DVEŘE") && plan.evidenceVeci.predmetVRuce() != null && plan.evidenceVeci.predmetVRuce().getNazev().equals("KLÍČ")){
             plan.dohrano();
             return "Utekl jsem";
