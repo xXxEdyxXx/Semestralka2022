@@ -75,6 +75,13 @@ public class HerniPlan {
         Vec piano = new Vec("PIANO", obyvaciPokoj, false, "Jdou slyšet krásné noty, čím víc se přibližuji tím méně hraje. Když se k němu postavím... ztichlo");
         Vec dvere = new Vec("DVEŘE", hala, false, "Zamčené dveře");
         Vec okno = new Vec("OKNO", kuchyn, false, "Velké okno... Sotva z něho jde vidět ven jak je zamrzlé");
+        Vec okno1 = new Vec("OKNO", obyvaciPokoj, false, "Velké okno... Sotva z něho jde vidět ven jak je zamrzlé");
+        Vec skrin = new Vec("SKŘÍN", kuchyn, false, "Malá skřín na potraviny... Je prázdná");
+        Vec pohovka = new Vec("POHOVKA", obyvaciPokoj, false, "Velmi pohodlná pohovka... Ale teď nemám čas na to odpočívat");
+        Vec postel = new Vec("POSTEL", loznice, false, "Stará postel... Dost vrže");
+        Vec postylka = new Vec("POSTÝLKA", detskyPokoj,false,"Stará dětská postýlka");
+        Vec hodiny = new Vec("HODINY", hala, false, "Staré hodiny... vypadá to, že se zasekly");
+        Vec auto = new Vec("AUTO", garaz, false, "Staré auto... pochybuju, že bych ho dokázal nastartovat");
 
         //Vkladání věci do evidence
         evidenceVeci.vlozVec(nuz);
@@ -83,6 +90,14 @@ public class HerniPlan {
         evidenceVeci.vlozVec(piano);
         evidenceVeci.vlozVec(dvere);
         evidenceVeci.vlozVec(okno);
+        evidenceVeci.vlozVec(okno1);
+        evidenceVeci.vlozVec(skrin);
+        evidenceVeci.vlozVec(pohovka);
+        evidenceVeci.vlozVec(postel);
+        evidenceVeci.vlozVec(postylka);
+        evidenceVeci.vlozVec(hodiny);
+        evidenceVeci.vlozVec(auto);
+
 
 
     }

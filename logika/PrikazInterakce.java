@@ -28,8 +28,6 @@ class PrikazInterakce implements IPrikaz {
 
         String vec = parametry[0];
 
-        String dialog = null;
-
         //Pokud se jedná o předmět který se dá sebrat
 
         Vec predmet = plan.evidenceVeci.jePredmetVMistnosti(plan.getAktualniProstor(), vec);
