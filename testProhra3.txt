@@ -1,0 +1,5 @@
+jdi Kuchyň
+interakce BONBÓN
+jdi Hala
+jdi Schodiště
+jdi Ložnice

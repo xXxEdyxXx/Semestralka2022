@@ -92,6 +92,7 @@ public class HerniPlan {
         Vec obraz = new Vec("OBRAZ", obyvaciPokoj, false, "Portrét nějakého pána... přísahám že mě jeho oči sledují");
         Vec chlupy = new Vec("CHLUPY", obyvaciPokoj, true, "Hromádka chlupů... Divný... nevypada to že by tady bylo nějaké zvíře");
         Vec lampicka = new Vec("LAMPIČKA", spawner, true, "Skřítkova kouzelná lampička");
+        Vec bonbon = new Vec("BONBÓN", kuchyn, true, "Jahodový bonbón");
 
         //Vkladání věci do evidence
         evidenceVeci.vlozVec(nuz);
@@ -115,6 +116,7 @@ public class HerniPlan {
         evidenceVeci.vlozVec(obraz);
         evidenceVeci.vlozVec(chlupy);
         evidenceVeci.vlozVec(lampicka);
+        evidenceVeci.vlozVec(bonbon);
 
 
     }

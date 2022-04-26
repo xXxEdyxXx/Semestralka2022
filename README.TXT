@@ -22,4 +22,4 @@ Jak vyhrát:  Hráč musí najít medvídka a položit ho do dětského pokoje..
              Hráč si musí zahrát hru se skřítkem a splnit jeho úkol... Pokud tak uděla objeví se mu klíč od hlavních dveří a může utéct
 Jak prohrát: Hráč za žádných okolností nesmí vstoupit do tajemné místnosti.
              Hráč nesmí mít v ruce nůž a jít do garáže.
-
+             Hráč nesmí mít v ruce bonbón a jít za skřítkem

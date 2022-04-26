@@ -63,6 +63,10 @@ class PrikazJdi implements IPrikaz {
                 dialog += "\nUklouzl jsem a napíchnul se na nůž co jsem držel v ruce";
                 plan.dohrano();
             }
+            if(sousedniProstor.getNazev().equals("Ložnice") && plan.evidenceVeci.predmetVRuce() != null && plan.evidenceVeci.predmetVRuce().getNazev().equals("BONBÓN")){
+                dialog += "\nSkřítek: TY MÁŠ BONBÓN.\nSkřítek po mě skočil, já spadl, uhodil se do hlavy a omdlel jsem";
+                plan.dohrano();
+            }
             return dialog;
         }
 
