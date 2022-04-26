@@ -42,7 +42,7 @@ public class HerniPlan {
         Prostor tajemnaMistnost = new Prostor("Tajemná_místnost", "Temná místnost, sotva vidím před sebe, hlasy ztichly, něco se hýbe na konci místnosti, vypadá to jako Vl...............");
         Prostor loznice = new Prostor("Ložnice", "Místnost s velkými okny, měsíční svit krásně rozzařuje celou mistnost");
         Prostor detskyPokoj = new Prostor("Dětský_pokoj", "Mála místnost s postelí, na posteli jsou vyskládaný plyšoví medvídci u prostřed mezi nimi je mezera, jakoby tam nějaký medvídek chyběl");
-        Prostor spawner = new Prostor("Spawner", "Admin-only");
+        Prostor spawner = new Prostor("Spawner", " ");
         
         // přiřazují se průchody mezi prostory (sousedící prostory)
 
@@ -63,6 +63,7 @@ public class HerniPlan {
         schodiste.setVychod(loznice);
 
         loznice.setVychod(schodiste);
+
         detskyPokoj.setVychod(schodiste);
 
         aktualniProstor = hala;  // hra začíná v hale
@@ -82,6 +83,13 @@ public class HerniPlan {
         Vec postylka = new Vec("POSTÝLKA", detskyPokoj,false,"Stará dětská postýlka");
         Vec hodiny = new Vec("HODINY", hala, false, "Staré hodiny... vypadá to, že se zasekly");
         Vec auto = new Vec("AUTO", garaz, false, "Staré auto... pochybuju, že bych ho dokázal nastartovat");
+        Vec krb = new Vec("KRB", obyvaciPokoj, false, "Starý krb... je v něm dost prachu");
+        Vec sklenice = new Vec("SKLENICE", obyvaciPokoj, true, "prázdná sklenice na vodu");
+        Vec svicka = new Vec("SVÍČKA", loznice, true, "Hezká nová svíčka");
+        Vec svicen = new Vec("SVÍCEN", obyvaciPokoj, true, "Zlatý svícen, svíčky na něm jsou zapálený");
+        Vec hrnecek = new Vec("HRNEČEK", obyvaciPokoj, true, "Starý hrneček... je v něm nějaká kapalina... to pít nebudu");
+        Vec obraz = new Vec("OBRAZ", obyvaciPokoj, false, "Portrét nějakého pána... přísahám že mě jeho oči sledují");
+        Vec chlupy = new Vec("CHLUPY", obyvaciPokoj, true, "Hromádka chlupů... Divný... nevypada to že by tady bylo nějaké zvíře");
 
         //Vkladání věci do evidence
         evidenceVeci.vlozVec(nuz);
@@ -97,7 +105,13 @@ public class HerniPlan {
         evidenceVeci.vlozVec(postylka);
         evidenceVeci.vlozVec(hodiny);
         evidenceVeci.vlozVec(auto);
-
+        evidenceVeci.vlozVec(krb);
+        evidenceVeci.vlozVec(sklenice);
+        evidenceVeci.vlozVec(svicka);
+        evidenceVeci.vlozVec(svicen);
+        evidenceVeci.vlozVec(hrnecek);
+        evidenceVeci.vlozVec(obraz);
+        evidenceVeci.vlozVec(chlupy);
 
 
     }
