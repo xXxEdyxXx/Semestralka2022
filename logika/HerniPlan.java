@@ -37,7 +37,7 @@ public class HerniPlan {
         Prostor hala = new Prostor("Hala", "Dlouhá tmavá hala se čtyřmi dveřmi a s velkým honosným schodištěm na konci. Ze zhora se ozývají podivné zvuky. Z jedné z místností se ozývají krásné toný piana");
         Prostor obyvaciPokoj = new Prostor("Obývací_pokoj", "Velká místnost, zatažené závěsy, stará pohovka s polštářky.Uprostřed místnosti stojí krásný naleštěný piano, které samo hraje.");
         Prostor kuchyn = new Prostor("Kuchyň", "Menší místnost, všude lítají mouchy, je tu velmi zatuhlý zvuk");
-        Prostor garaz = new Prostor("Garáž", "prázdná místnost, žádné okna ani dveře, podlaha divně klouže, musím být opatrný");
+        Prostor garaz = new Prostor("Garáž", "prázdná místnost, žádné okna ani dveře, podlaha divně klouže, musím být opatrný... Na ponku sedí kočka");
         Prostor koupelna = new Prostor("Koupelna", "Malá mramorová místnost, krásně naleštěná a vypucovaná koupelna, vypadá mnohem líp než u mě doma");
         Prostor schodiste = new Prostor("Schodiště", "Podivné zvuky jsou hlasitejší, dokážu říct že se ozývaji ze tajemné místnosti na konci chodby, nemyslím si, že je dobrý nápad zkoumat co je za nimi, na levo se nachází další dvoje dveře");
         Prostor tajemnaMistnost = new Prostor("Tajemná_místnost", "Temná místnost, sotva vidím před sebe, hlasy ztichly, něco se hýbe na konci místnosti, vypadá to jako Vl...............");
@@ -93,6 +93,8 @@ public class HerniPlan {
         Vec chlupy = new Vec("CHLUPY", obyvaciPokoj, true, "Hromádka chlupů... Divný... nevypada to že by tady bylo nějaké zvíře");
         Vec lampicka = new Vec("LAMPIČKA", spawner, true, "Skřítkova kouzelná lampička");
         Vec bonbon = new Vec("BONBÓN", kuchyn, true, "Jahodový bonbón");
+        Vec struna = new Vec("STRUNA", spawner, true, "Pianová struna");
+        Vec papir = new Vec("PAPÍR", spawner, true, "Je na něm číslo 4586");
 
         //Vkladání věci do evidence
         evidenceVeci.vlozVec(nuz);
@@ -117,6 +119,8 @@ public class HerniPlan {
         evidenceVeci.vlozVec(chlupy);
         evidenceVeci.vlozVec(lampicka);
         evidenceVeci.vlozVec(bonbon);
+        evidenceVeci.vlozVec(struna);
+        evidenceVeci.vlozVec(papir);
 
 
     }

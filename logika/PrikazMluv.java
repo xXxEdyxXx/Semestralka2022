@@ -41,6 +41,11 @@ class PrikazMluv implements IPrikaz{
                 return "To není číslo ale... s tebou nehraju";
             }
 
+            if(hadaneCislo == 4586){
+                tajnyKod();
+                return "";
+            }
+
             while (hadaneCislo != randomNumber){
                 System.out.print("Haha... špatně. Číslo které si mýslím je ");
 
@@ -54,7 +59,10 @@ class PrikazMluv implements IPrikaz{
                 } catch (InputMismatchException e) {
                     return "Ale to není číslo ale... s tebou nehraju";
                 }
-
+                if(hadaneCislo == 4586){
+                    tajnyKod();
+                    return "";
+                }
             }
 
             System.out.println("Správně, bylo to " + randomNumber + "\nDěkuji, že si si zahrál se mnou");
@@ -126,6 +134,11 @@ class PrikazMluv implements IPrikaz{
 
         }
         return "insert a funny joke";
+    }
+
+    private void tajnyKod(){
+        System.out.println("Vy znáte pánovo tajné heslo... Ja vám musím dát tohle a pustit vás ven... Pojdte za mnou prosím.\n Skřítek mi podal truhlici se zlatem a pustil mě ven\n Utekl jsem se zlatým pokladem");
+        plan.dohrano();
     }
 
     @Override
