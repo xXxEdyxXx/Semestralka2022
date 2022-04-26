@@ -50,7 +50,7 @@ class PrikazJdi implements IPrikaz {
         else {
             String dialog = sousedniProstor.dlouhyPopis();
             plan.setAktualniProstor(sousedniProstor);
-            if ( getRandomNumber(0,100) > 50){
+            if ( getRandomNumber(0,100) > 25){
                 plan.setDuch(true);
                 dialog += "\nV rohu mistnosti stojí duch";
             }

@@ -18,6 +18,7 @@ public class HerniPlan {
     private boolean duch = false;
     public EvidenceVeci evidenceVeci;
     public boolean status = false;
+    public boolean lampicka = false;
 
      /**
      *  Konstruktor který vytváří jednotlivé prostory a propojuje je pomocí východů.
@@ -40,7 +41,7 @@ public class HerniPlan {
         Prostor koupelna = new Prostor("Koupelna", "Malá mramorová místnost, krásně naleštěná a vypucovaná koupelna, vypadá mnohem líp než u mě doma");
         Prostor schodiste = new Prostor("Schodiště", "Podivné zvuky jsou hlasitejší, dokážu říct že se ozývaji ze tajemné místnosti na konci chodby, nemyslím si, že je dobrý nápad zkoumat co je za nimi, na levo se nachází další dvoje dveře");
         Prostor tajemnaMistnost = new Prostor("Tajemná_místnost", "Temná místnost, sotva vidím před sebe, hlasy ztichly, něco se hýbe na konci místnosti, vypadá to jako Vl...............");
-        Prostor loznice = new Prostor("Ložnice", "Místnost s velkými okny, měsíční svit krásně rozzařuje celou mistnost");
+        Prostor loznice = new Prostor("Ložnice", "Místnost s velkými okny, měsíční svit krásně rozzařuje celou mistnost... Na posteli stojí skřítek");
         Prostor detskyPokoj = new Prostor("Dětský_pokoj", "Mála místnost s postelí, na posteli jsou vyskládaný plyšoví medvídci u prostřed mezi nimi je mezera, jakoby tam nějaký medvídek chyběl");
         Prostor spawner = new Prostor("Spawner", " ");
         
@@ -90,6 +91,7 @@ public class HerniPlan {
         Vec hrnecek = new Vec("HRNEČEK", obyvaciPokoj, true, "Starý hrneček... je v něm nějaká kapalina... to pít nebudu");
         Vec obraz = new Vec("OBRAZ", obyvaciPokoj, false, "Portrét nějakého pána... přísahám že mě jeho oči sledují");
         Vec chlupy = new Vec("CHLUPY", obyvaciPokoj, true, "Hromádka chlupů... Divný... nevypada to že by tady bylo nějaké zvíře");
+        Vec lampicka = new Vec("LAMPIČKA", spawner, true, "Skřítkova kouzelná lampička");
 
         //Vkladání věci do evidence
         evidenceVeci.vlozVec(nuz);
@@ -112,6 +114,7 @@ public class HerniPlan {
         evidenceVeci.vlozVec(hrnecek);
         evidenceVeci.vlozVec(obraz);
         evidenceVeci.vlozVec(chlupy);
+        evidenceVeci.vlozVec(lampicka);
 
 
     }
@@ -172,5 +175,13 @@ public class HerniPlan {
 
     public boolean isStatus() {
         return status;
+    }
+
+    public boolean isLampicka() {
+        return lampicka;
+    }
+
+    public void setLampicka(boolean lampicka) {
+        this.lampicka = lampicka;
     }
 }
