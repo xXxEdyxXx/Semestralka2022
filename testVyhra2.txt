@@ -1,0 +1,18 @@
+jdi Kuchyň
+interakce NŮŽ
+jdi Hala
+jdi Obývací_pokoj
+pust
+interakce STRUNA
+jdi Hala
+jdi Garáž
+pust
+interakce PAPÍR
+jdi Hala
+jdi Schodiště
+jdi Ložnice
+inventář
+mluv
+mluv
+
+4586

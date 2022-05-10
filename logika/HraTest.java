@@ -46,8 +46,6 @@ public class HraTest {
     /***************************************************************************
      * Testuje průběh hry, po zavolání každěho příkazu testuje, zda hra končí
      * a v jaké aktuální místnosti se hráč nachází.
-     * Při dalším rozšiřování hry doporučujeme testovat i jaké věci nebo osoby
-     * jsou v místnosti a jaké věci jsou v batohu hráče.
      * 
      */
     @Test

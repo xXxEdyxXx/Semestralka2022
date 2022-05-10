@@ -37,22 +37,14 @@ public class Hra implements IHra {
      *  Vrátí úvodní zprávu pro hráče.
      */
     public String vratUvitani() {
-        return  "  #####                              \n" +
-                " #     #  ####    ##   #####  #   #  \n" +
-                " #       #    #  #  #  #    #  # #   \n" +
-                "  #####  #      #    # #    #   #    \n" +
-                "       # #      ###### #####    #    \n" +
-                " #     # #    # #    # #   #    #    \n" +
-                "  #####   ####  #    # #    #   #    \n" +
-                "                                     \n" +
-                " #     #                             \n" +
-                " #     #  ####  #    #  ####  ###### \n" +
-                " #     # #    # #    # #      #      \n" +
-                " ####### #    # #    #  ####  #####  \n" +
-                " #     # #    # #    #      # #      \n" +
-                " #     # #    # #    # #    # #      \n" +
-                " #     #  ####   ####   ####  ###### \n" +
-                "                                     \n" +
+        return
+                "  #####                                #     #                             \n" +
+                " #     #  ####    ##   #####  #   #    #     #  ####  #    #  ####  ###### \n" +
+                " #       #    #  #  #  #    #  # #     #     # #    # #    # #      #      \n" +
+                "  #####  #      #    # #    #   #      ####### #    # #    #  ####  #####  \n" +
+                "       # #      ###### #####    #      #     # #    # #    #      # #      \n" +
+                " #     # #    # #    # #   #    #      #     # #    # #    # #    # #      \n" +
+                "  #####   ####  #    # #    #   #      #     #  ####   ####   ####  ###### \n" +
                "U nás na vsi už dlouho stojí tento strašidelný dům. Všichni se mu obloukem vyhýbají. Nikdo se neodvaži k němu přiblížiz... \nJe zima. Sneží. Vracím se z práce domu. Najednou obrovská sněhová bouře. Musím se někam schovat\nJedina budova široko daleko je tento nejspíše opuštěný dům, Schovám se tam než se bouře přežene\nStojím před domem. Sbírám veškerou moji kuráž a šahám po klice... Otačím s ní. Otvírám dveře a vstupuju do vnitř\nVcházím do veliké haly, než se vzpamatuju kde to jsem tak slyším velkou ránu. Dveře se za mnou zavřeli. Snažím  se je otevřít ale jsou zamčený\n" +
                "Napište 'nápověda', pokud si nevíte rady, jak hrát dál.\n" +
                "\n" +
@@ -98,11 +90,6 @@ public class Hra implements IHra {
         }
         else {
             textKVypsani="Nevím co tím myslíš? Tento příkaz neznám. ";
-        }
-
-        if(herniPlan.getAktualniProstor().toString().equals("chaloupka")){
-            System.out.println("Gratuluji vyhral si!");
-            setKonecHry(true);
         }
 
         return textKVypsani;
