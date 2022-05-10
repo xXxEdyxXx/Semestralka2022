@@ -19,6 +19,7 @@ public class HerniPlan {
     public EvidenceVeci evidenceVeci;
     public boolean status = false;
     public boolean lampicka = false;
+    public Batoh batoh = new Batoh();
 
      /**
      *  Konstruktor který vytváří jednotlivé prostory a propojuje je pomocí východů.
@@ -169,6 +170,10 @@ public class HerniPlan {
 
     public EvidenceVeci getEvidenceVeci() {
         return evidenceVeci;
+    }
+
+    public Batoh getLedvinka() {
+        return batoh;
     }
 
     /**

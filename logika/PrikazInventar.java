@@ -27,7 +27,7 @@ class PrikazInventar implements IPrikaz{
         if(predmet == null){
             return "V ruce nic nedržím";
         }
-            return "V ruce držím " + predmet.getNazev() + "\n" + predmet.getPopis();
+            return "V ruce držím " + plan.getLedvinka().getPredmet() + "\n" + predmet.getPopis();
 
     }
 

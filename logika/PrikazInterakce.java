@@ -43,6 +43,7 @@ class PrikazInterakce implements IPrikaz {
         if(predmet != null && predmet.isMohuVzit() == true){
             if(plan.evidenceVeci.predmetVRuce() == null){
                 predmet.setProstor(null);
+                plan.getLedvinka().setPredmet(vec);
                 return "Držim " + vec;
             }else {
                 return "Neunesu už další věc";

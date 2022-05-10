@@ -51,7 +51,7 @@ class PrikazPust implements IPrikaz {
                 dialog += ", Když jsem položil strunu, kočka si s ni začala hrát a ukázalo se, že seděla na nějakém papírku";
                 plan.evidenceVeci.getUrcityPredmet("PAPÍR").setProstor(plan.getAktualniProstor());
             }
-
+            plan.getLedvinka().setPredmet(null);
             plan.evidenceVeci.predmetVRuce().setProstor(plan.getAktualniProstor());
             return dialog;
         }

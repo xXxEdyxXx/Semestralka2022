@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
  * @author Adam Stupka
  */
 
-public class EvidenceVecTest {
+public class BatohTest {
 
     private Hra hra;
     private Prostor prostor;
