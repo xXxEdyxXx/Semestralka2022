@@ -13,17 +13,10 @@ import static org.junit.Assert.assertEquals;
 public class BatohTest {
 
     private Hra hra;
-    private Prostor prostor;
-    private Vec vec1;
-    private Vec vec2;
-    private EvidenceVeci evidenceVeci;
 
     @Before
     public void setUp() {
         hra = new Hra();
-        vec1 = new Vec("MEC", prostor, true,"Ostrý meč");
-        vec2 = new Vec("STŮL", prostor, false, "Težky stůl");
-        evidenceVeci = new EvidenceVeci();
     }
 
     //Test batohu a předmětů

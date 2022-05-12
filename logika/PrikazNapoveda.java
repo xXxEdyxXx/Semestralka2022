@@ -4,7 +4,7 @@ package logika;
  *  Třída PrikazNapoveda implementuje pro hru příkaz napoveda.
  *  Tato třída je součástí jednoduché textové hry.
  *  
- *@author     Jarmila Pavlickova, Luboš Pavlíček
+ *@author     Jarmila Pavlickova, Luboš Pavlíček, Adam Stupka
  *@version    pro školní rok 2016/2017
  *  
  */

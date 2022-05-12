@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 
+/**
+ * Třída která zaznamenává oředměty ve hře
+ * @author Adam Stupka
+ */
+
 public class EvidenceVeci {
 
     private Collection<Vec> seznam;

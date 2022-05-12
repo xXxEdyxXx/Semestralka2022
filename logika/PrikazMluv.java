@@ -26,9 +26,17 @@ class PrikazMluv implements IPrikaz{
     @Override
     public String provedPrikaz(String... parametry) {
 
+        /**
+         * Test pokud jde s nekým mluvit
+         */
+
         if (plan.getDuch() == false && plan.getAktualniProstor().getNazev() != "Ložnice"){
             return "Není tu nikdo s kým bych mohl mluvit";
         }
+
+        /**
+         * Hraní hry se skřítkem
+         */
 
         if (plan.getDuch() == false){
             Scanner sc=new Scanner(System.in);
@@ -41,10 +49,18 @@ class PrikazMluv implements IPrikaz{
                 return "To není číslo ale... s tebou nehraju";
             }
 
+            /**
+             * Tajný kod
+             */
+
             if(hadaneCislo == 4586){
                 tajnyKod();
                 return "";
             }
+
+            /**
+             * While cyklus hry
+             */
 
             while (hadaneCislo != randomNumber){
                 System.out.print("Haha... špatně. Číslo které si mýslím je ");
@@ -67,6 +83,10 @@ class PrikazMluv implements IPrikaz{
 
             System.out.println("Správně, bylo to " + randomNumber + "\nDěkuji, že si si zahrál se mnou");
 
+            /**
+             * Splnění hry
+             */
+
             if (plan.isLampicka() == false){
                 System.out.println("Mohl by si prosím odnést tuto lampičku do kuchyně? Já mám malý nožičky a běhá se mi špatně po schodech");
                 plan.evidenceVeci.getUrcityPredmet("LAMPIČKA").setProstor(plan.getAktualniProstor());
@@ -74,6 +94,10 @@ class PrikazMluv implements IPrikaz{
 
             return "";
         }
+
+        /**
+         * Interakce s duchem
+         */
 
         if(plan.getDuch() == true) {
 
@@ -136,8 +160,12 @@ class PrikazMluv implements IPrikaz{
         return "insert a funny joke";
     }
 
+    /**
+     * Metoda která vyhraje hru
+     */
+
     private void tajnyKod(){
-        System.out.println("Vy znáte pánovo tajné heslo... Ja vám musím dát tohle a pustit vás ven... Pojdte za mnou prosím.\n Skřítek mi podal truhlici se zlatem a pustil mě ven\n Utekl jsem se zlatým pokladem");
+        System.out.println("Vy znáte moje tajné heslo... Ja vám musím něco dát a pustit vás ven... Pojdte za mnou prosím.\n Skřítek mi podal truhlici se zlatem a pustil mě ven\n Utekl jsem se zlatým pokladem");
         plan.dohrano();
     }
 
@@ -146,6 +174,13 @@ class PrikazMluv implements IPrikaz{
         return NAZEV;
     }
 
+
+    /**
+     * Metoda generování náhodných čisel
+     * @param min
+     * @param max
+     * @return nahodné číslo
+     */
     public int getRandomNumber(int min, int max) {
         return (int) ((Math.random() * (max - min)) + min);
     }

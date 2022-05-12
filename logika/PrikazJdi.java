@@ -4,7 +4,7 @@ package logika;
  *  Třída PrikazJdi implementuje pro hru příkaz jdi.
  *  Tato třída je součástí jednoduché textové hry.
  *  
- *@author     Jarmila Pavlickova, Luboš Pavlíček
+ *@author     Jarmila Pavlickova, Luboš Pavlíček, Adam Stupka
  *@version    pro školní rok 2016/2017
  */
 class PrikazJdi implements IPrikaz {

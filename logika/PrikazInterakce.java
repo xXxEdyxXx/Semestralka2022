@@ -6,7 +6,7 @@ package logika;
  *  Toto je hlavní třída  manipulace s předměty. Vypisuje nazvy, popisy a interakce s předměty
  *
  *@author     Adam Stupka
- *@version
+ *
  */
 
 class PrikazInterakce implements IPrikaz {
@@ -28,16 +28,24 @@ class PrikazInterakce implements IPrikaz {
     @Override
     public String provedPrikaz(String... parametry) {
 
+        /**
+         * Pokud chybí druhé slovo
+         */
+
         if (parametry.length == 0) {
-            // pokud chybí druhé slovo
             return "S čím?";
         }
 
-        //Podle parametru a v jake se nachazíme místnosti určíme co se stane
+        /**
+         * Podle parametru a v jake se nachazíme místnosti určíme co se stane
+         */
+
 
         String vec = parametry[0];
 
-        //Pokud se jedná o předmět který se dá sebrat
+        /**
+         * Pokud se předmět dá sebrat
+         */
 
         Vec predmet = plan.evidenceVeci.jePredmetVMistnosti(plan.getAktualniProstor(), vec);
         if(predmet != null && predmet.isMohuVzit() == true){
@@ -50,7 +58,9 @@ class PrikazInterakce implements IPrikaz {
             }
         }
 
-        //interakce se dveřmi pokud máme klíč
+        /**
+         * interakce se dveřmi pokud máme klíč
+         */
 
         if( predmet != null && predmet.getNazev().equals("DVEŘE") && plan.evidenceVeci.predmetVRuce() != null && plan.evidenceVeci.predmetVRuce().getNazev().equals("KLÍČ")){
             plan.dohrano();
