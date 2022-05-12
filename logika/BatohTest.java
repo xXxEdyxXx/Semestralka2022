@@ -19,7 +19,7 @@ public class BatohTest {
         hra = new Hra();
     }
 
-    //Test batohu a předmětů
+    //Test batohu a interakce s předměty
 
     @Test
     public void testPrubehHry() {
@@ -33,6 +33,8 @@ public class BatohTest {
         assertEquals("Neunesu už další věc", hra.zpracujPrikaz("interakce SKLENICE"));
         assertEquals("Pustil jsem MEDVÍDEK", hra.zpracujPrikaz("pust"));
         assertEquals("V ruce nic nedržím", hra.zpracujPrikaz("inventar"));
+        assertEquals("S čím?", hra.zpracujPrikaz("interakce"));
+        assertEquals("Tento předmět zde nevidím", hra.zpracujPrikaz("interakce AUTO"));
 
         //Nelze sebrat velké předměty
         assertEquals("Jdou slyšet krásné noty, čím víc se přibližuji tím méně hraje. Když se k němu postavím... ztichlo", hra.zpracujPrikaz("interakce PIANO"));
